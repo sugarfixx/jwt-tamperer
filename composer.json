@@ -1,0 +1,23 @@
+{
+  "name": "sugarfixx/jwt-tamperer",
+  "description": "Creates a tampered token that should not pass validity checks",
+  "type": "library",
+  "require-dev": {
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ingar Torsrud",
+      "email": "ingar.torsrud@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.2.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "JwtTamperer": "src/"
+    }
+  }
+}
