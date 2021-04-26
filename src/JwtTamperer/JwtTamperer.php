@@ -11,8 +11,15 @@ namespace JwtTamperer;
 
 class JwtTamperer
 {
+    /**
+     * @var
+     */
     private $jwt;
 
+    /**
+     * JwtTamperer constructor.
+     * @param null $jwt
+     */
     public function __construct($jwt = null)
     {
         if ($jwt) {
@@ -20,8 +27,10 @@ class JwtTamperer
         }
     }
 
-    
-    public function buildCompromisedToken()
+    /**
+     * @return string
+     */
+    public function buildCompromisedToken() : string
     {
         $fragments = explode('.', $this->jwt);
         $validPayload = json_decode(base64_decode($fragments[1]));
